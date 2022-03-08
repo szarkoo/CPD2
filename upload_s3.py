@@ -26,7 +26,7 @@ def upload_file(file_name, bucket, object_name=None):
         return False
     return True
 
-a_directory = "images/images/"
+a_directory = "CW/images/images/"
 for filename in os.listdir(a_directory):
     filepath = os.path.join(a_directory, filename)
     upload_file(filepath,"buckets1827468")

@@ -44,7 +44,7 @@ if __name__ == '__main__':
       logger.info(f'Directory is empty. No files to upload.')
     else:
       for filename in os.listdir(a_directory):
-        if file_name.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif')):
+        if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif')):
           filepath = os.path.join(a_directory, filename)
           logger.info(f'Uploading {filepath} to S3 bucket {bucket_name}...')
           sleep(30)

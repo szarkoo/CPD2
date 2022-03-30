@@ -47,7 +47,7 @@ if __name__ == '__main__':
     if len(os.listdir(a_directory) ) == 0:
       logger.info(f'Directory is empty. No files to upload.')
     else:
-    for filename in os.listdir(a_directory):
+      for filename in os.listdir(a_directory):
         filepath = os.path.join(a_directory, filename)
         logger.info(f'Uploading {filepath} to S3 bucket {bucket_name}...')
         upload_file(filepath,bucket_name)
